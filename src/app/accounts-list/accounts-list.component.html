@@ -1,0 +1,23 @@
+<h2>Lista de cuentas</h2>
+<table class="table table.striped">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>clave</th>
+            <th>Nombre</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cuenta of cuentas">
+            <td>{{cuenta.id}}</td>
+            <td>{{cuenta.clave}}</td>
+            <td>{{cuenta.nombre}}</td>
+            <td>
+                <button (click)="updateAccount(cuenta.id)" class="btn btn-info">Editar</button>
+                <button (click)="deleteAccount(cuenta.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+                <button (click)="showAccount(cuenta.id)" class="btn btn-primary" style="margin-left: 10px;">Detalles</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

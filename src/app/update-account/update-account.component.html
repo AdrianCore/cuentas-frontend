@@ -1,0 +1,34 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Editar cuenta</h3>
+    <br>
+    <form (ngSubmit)= "onSubmit()" #cuentaForm = "ngForm">
+      <div class="form-group">
+        <label>Clave : </label>
+        <input type = "text"
+        class="form-control"
+        id = "clave"
+        [(ngModel)] = "cuenta.clave"
+        name = "clave"
+        required
+        placeholder="Digite su clave"
+        #clave = "ngModel"
+        >
+      </div>
+      <br>
+      <div class="form-group">
+        <label>Nombre : </label>
+        <input type = "text"
+        class="form-control"
+        id = "nombre"
+        [(ngModel)] = "cuenta.nombre"
+        name = "nombre"
+        required
+        placeholder="Digite el nombre de la cuenta "
+        #nombre = "ngModel"
+        >
+      </div>
+      <br>
+      <button class="btn btn-success">Guardar</button>
+    </form>
+  </div>
+  

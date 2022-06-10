@@ -1,0 +1,25 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Crear una cuenta nueva</h3>
+    <form (ngSubmit)="onSubmit()">
+        <br>
+        <div class="form-group">
+            <label>Clave: </label>
+            <input type="text"
+            class="form-control"
+            id = "clave"
+            [(ngModel)] = "cuenta.clave"
+            name="clave">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Nombre: </label>
+            <input type="text"
+            class="form-control"
+            id = "nombre"
+            [(ngModel)] = "cuenta.nombre"
+            name="nombre">
+        </div>
+        <br>
+        <button class="btn btn-success">Guardar</button>
+    </form>
+</div>
